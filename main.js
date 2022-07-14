@@ -3,6 +3,7 @@
 //With a given array, remove the lowest and highest number and add the rest together.
 //Also test cases have null and undefined when null is entered and an empty array
 
+//Thought process
 //To get the highest and lowest value, it'll be easier to just sort the array from lowest to highest, take off the lowest and highest value after sorted and then add the remaining together.
 
 function sumArray(array) {
@@ -28,4 +29,4 @@ function sumArray(array) {
   }
 }
 
-console.log(sumArray([3, 5]));
+console.log(sumArray([3, 8, 15, 2, 5]));
