@@ -31,6 +31,26 @@ function sumArray(array) {
 
 console.log(sumArray([3, 8, 15, 2, 5]));
 
+//Change previous time complexity from O(nlogn) to O(n)
+let numbers = function(index){
+  let min = index[0];
+  let max = index[0];
+  let sum = 0; //this equals 6 by the first position
+  console.log(min)
+  for(let i = 0; i < index.length; i++){
+      if(min > index[i]){
+         min = index[i];
+      }
+      if(max < index[i]){
+        max = index[i];
+     } 
+      sum += index[i];
+    }
+    return sum - min - max;
+  }
+  
+  console.log(numbers([6, 2, 1, 8, 10]))
+
 //LeetCode
 //Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -65,5 +85,5 @@ var twoSum = function (nums, target) {
 
 console.log(twoSum([1, 5, 3, 5, 15], 10));
 
-//testing git push on windows setup
-//not using ubuntu with this push
+
+
