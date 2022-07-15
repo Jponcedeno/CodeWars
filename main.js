@@ -32,24 +32,28 @@ function sumArray(array) {
 console.log(sumArray([3, 8, 15, 2, 5]));
 
 //Change previous time complexity from O(nlogn) to O(n)
-let numbers = function(index){
-  let min = index[0];
-  let max = index[0];
-  let sum = 0; //this equals 6 by the first position
-  console.log(min)
-  for(let i = 0; i < index.length; i++){
-      if(min > index[i]){
-         min = index[i];
+//had issues with null and array length of 1 and 2, issues fixed
+//time complexity 0(n)
+function sumArray(array) {
+  if(array == null || array.length <= 2){
+    return 0;
+  } 
+  let min = array[0];
+  let max = array[0];
+  let sum = 0; 
+  for(let i = 0; i < array.length; i++){
+      if(min > array[i]){
+         min = array[i];
       }
-      if(max < index[i]){
-        max = index[i];
+      if(max < array[i]){
+        max = array[i];
      } 
-      sum += index[i];
+      sum += array[i];
     }
     return sum - min - max;
   }
   
-  console.log(numbers([6, 2, 1, 8, 10]))
+  console.log(sumArray([6, 2, 1, 8, 10]))
 
 //LeetCode
 //Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
