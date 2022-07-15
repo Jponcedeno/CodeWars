@@ -64,3 +64,6 @@ var twoSum = function (nums, target) {
 };
 
 console.log(twoSum([1, 5, 3, 5, 15], 10));
+
+//testing git push on windows setup
+//not using ubuntu with this push
