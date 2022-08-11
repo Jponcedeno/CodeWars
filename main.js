@@ -90,4 +90,30 @@ var twoSum = function (nums, target) {
 console.log(twoSum([1, 5, 3, 5, 15], 10));
 
 
+function squareSum(numbers){
+  let sum2 = 0;
+  for(let i = 0; i < numbers.length; i++){
+    sum2 += Math.pow(numbers[i], 2); 
+  }
+  
+  return sum2
+}
+
+console.log(squareSum([1, 3, 4, 5]))
+
+
+//Sum Mixed Array on Code Wars
+//Takes in different types an converts them using the Number method to covert strings into numbers
+
+function sumMix(x){
+  let sum = 0;
+  for(let i = 0; i < x.length; i++){ 
+    let convertedNum = Number(x[i]);
+    sum += convertedNum;
+  }
+  return sum;
+}
+
+console.log(sumMix([1, 3, 4, '1']))
+
 
